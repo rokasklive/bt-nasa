@@ -1,4 +1,4 @@
-package test;
+package lt.baltic.talents.nasa.system.models;
 
 import java.util.ArrayList;
 import java.util.List;

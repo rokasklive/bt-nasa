@@ -9,7 +9,16 @@
 </head>
 
 <body>
-	<h1>Hello world!</h1>
-	
+	<form action="/" method="get">
+		<label for="seed">Seed:</label>
+			<input type="text" name="seed" id="seed">
+		<label for="objs">Object count:</label>
+			<input type="number" name="objs" id="objs">
+		<label for="axisx">Size X-Axis</label>
+			<input type="number" name="axisx" id="axisx">
+		<label for="axisy">Size Y-Axis</label>
+			<input type="number" name="axisy" id="axist">
+			<input type="submit" name="Submit" value="Submit">
+	</form>
 </body>
 </html>

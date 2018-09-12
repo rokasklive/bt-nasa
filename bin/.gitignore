@@ -4,3 +4,6 @@ target
 .settings
 db
 /src/
+/.gitattributes
+/.gitignore
+/pom.xml

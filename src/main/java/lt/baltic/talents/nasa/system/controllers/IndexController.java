@@ -17,7 +17,7 @@ public class IndexController {
 		return "index/index";
 	}
 	
-	@RequestMapping("create")
+	@RequestMapping("nasa")
 	public String ufoStart(@ModelAttribute("ufo") Grid grid ) {
 		
 		return "index/nasa";

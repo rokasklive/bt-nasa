@@ -6,11 +6,13 @@
 
 <html>
 <head>
+	<link href="<c:url value="resources/css/main.css"/>" rel="stylesheet">
 	<title><spring:message code="message.title" /></title>
 </head>
 
 <body>
-	<form:form action="create" modelAttribute="ufo">
+	<div class="display">aaaaaa</div>
+	<form:form action="nasa" modelAttribute="ufo">
 		Seed <form:input path="seed"/>
 		<br>
 		<br>

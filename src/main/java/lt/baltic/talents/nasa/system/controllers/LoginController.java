@@ -40,7 +40,7 @@ public class LoginController {
 		
 		if (login) {
 			redirectAttributes.addFlashAttribute("user", user);
-			return "redirect:/";
+			return "redirect:/hello";
 		}
 		
 		return "login/failure";

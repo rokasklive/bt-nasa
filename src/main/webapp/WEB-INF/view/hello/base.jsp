@@ -18,6 +18,7 @@
 		    	<span>
 		    		<c:if test="${not empty user.login}">
 		    			${user.login}
+		    			${user.id}
 		    		</c:if>
 		    	</span>
 		    </p>

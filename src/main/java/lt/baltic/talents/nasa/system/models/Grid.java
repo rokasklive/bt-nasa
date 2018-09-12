@@ -1,10 +1,14 @@
 package lt.baltic.talents.nasa.system.models;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Grid {
 
 	private int xAxis;

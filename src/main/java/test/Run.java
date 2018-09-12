@@ -1,5 +1,8 @@
 package test;
 
+import lt.baltic.talents.nasa.system.models.Grid;
+import lt.baltic.talents.nasa.system.models.Ufo;
+
 public class Run {
 
 	public static void main(String[] args) {

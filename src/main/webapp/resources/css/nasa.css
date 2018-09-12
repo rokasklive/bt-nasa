@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+
+*{
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+.display {
+	display: inline-block;
+	height: 80vh;
+	width: 100%;
+	background-color: #00000080;
+	
+}
+
+.userDisplay {
+	display: inline-block;
+	height: 20vh;
+	width: 100%;
+	background-color: #8080804d;
+	
+}

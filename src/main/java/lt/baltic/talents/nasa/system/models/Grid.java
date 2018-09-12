@@ -1,4 +1,4 @@
-package test;
+package lt.baltic.talents.nasa.system.models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +13,8 @@ public class Grid {
 	private int ufoCount;
 	private List<Ufo> ufo;
 	private List<Sattelite> sat;
+	
+	public Grid() {}
 
 	public Grid(String seed, int ufoCount, int xAxis, int yAxis) {
 		this.xAxis = xAxis;

@@ -6,23 +6,36 @@
 <html>
 <head>
 	<title><spring:message code="message.title" /></title>
+	<style>
+
+		form{
+		
+			margin: auto;
+			width: 200px;
+			text-align: center;
+		}
+		
+		input{
+			margin: 0 auto;
+			margin-bottom: 10px;
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
-	<form action="/gen" method="get">
-		<label for="seed">Seed:</label>
-			<input type="text" name="seed" id="seed">
-			
-		<label for="objs">Object count:</label>
-			<input type="number" name="objs" id="objs">
-			
-		<label for="axisx">Size X-Axis</label>
-			<input type="number" name="axisx" id="axisx">
-			
-		<label for="axisy">Size Y-Axis</label>
-			<input type="number" name="axisy" id="axist">
-			
-			<input type="submit" name="Submit" value="Submit">
+	<form action="gen" method="get">
+
+			<input type="text" name="seed" id="seed" placeholder="Seed">
+
+			<input type="number" name="objs" id="objs" placeholder="Object amount">
+
+			<input type="number" name="axisx" id="axisx" placeholder="Scanner width">
+	
+			<input type="number" name="axisy" id="axisy" placeholder="Scanner height">
+
+			<input type="submit" name="submit" value="Submit">
+
 	</form>
 </body>
 </html>

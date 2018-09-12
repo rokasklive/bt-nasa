@@ -13,6 +13,8 @@
      http://www.springframework.org/schema/tx
      http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	 
+	 <mvc:annotation-driven />
 	<context:component-scan
 		base-package="lt.baltic.talents.nasa.system" />
 
@@ -20,7 +22,7 @@
 	<mvc:resources mapping="/resources/**"
 		location="/resources/" />
 
-	<mvc:annotation-driven />
+
 
 	<mvc:interceptors>
 		<bean

@@ -1,5 +1,7 @@
 package lt.baltic.talents.nasa.system.controllers;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import lt.baltic.talents.nasa.system.models.Grid;
+import lt.baltic.talents.nasa.system.models.Ufo;
 
 @Controller
 @RequestMapping("/gen")
@@ -22,6 +25,7 @@ public class GenController {
 		
 		Grid grid = new Grid(genSeed, genObjs, genAxisx, genAxisy);
 		
+		Grid.setGrid(grid);
 
 		String gridSeed = grid.getSeed();
 		model.addAttribute("gridSeed", gridSeed);
@@ -31,6 +35,12 @@ public class GenController {
 		
 		int gridAxisy = grid.getyAxis();
 		model.addAttribute("gridAxisy", gridAxisy);
+		
+		List<Ufo> list = grid.getUfo();
+		
+		for(Ufo u: list) {
+			System.out.println(u.getxCoord() + " " + u.getyCoord());
+		}
 		
 		return "centre/scanner";
 	}

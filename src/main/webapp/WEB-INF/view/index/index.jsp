@@ -13,6 +13,7 @@
 			margin: auto;
 			width: 200px;
 			text-align: center;
+			margin-top: 50px;
 		}
 		
 		input{
@@ -20,10 +21,21 @@
 			margin-bottom: 10px;
 			text-align: center;
 		}
+		
+		.image_wrapper{
+			text-align: center;
+			margin-top: 50px
+		}
+		
+
 	</style>
 </head>
 
 <body>
+	<div class="image_wrapper">
+		<img src="<c:url value="/resources/img/NASA_logo.png"/>">
+	</div>
+
 	<form action="gen" method="get">
 
 			<input type="text" name="seed" id="seed" placeholder="Seed">

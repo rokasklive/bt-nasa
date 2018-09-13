@@ -6,6 +6,8 @@
 <html>
 <head>
 	<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/scanner.css" />" rel="stylesheet">
+	
 	<script src="<c:url value="/resources/js/jquery-3.3.1.js"/>" type="text/javascript"></script> 
 	
     <title><spring:message code="message.title" /></title>
@@ -35,6 +37,8 @@
     	padding: 0;
     	margin: 0;
     }
+
+}
     
     </style>
     <script type="text/javascript">
@@ -52,14 +56,16 @@
        			        console.log(data);
 						findObj(data);
        			    }
-       			}); 
-       			
+       			}); 		
     		}
+   		 
    		 function findObj(coordinates){
    			 setTimeout(function(){
-   			 $(coordinates).css("background-color", "green");
-   			 $(coordinates).css("border-radius", "50%");
-   			}, 4000)
+   	   		$(coordinates).css("background-color", "green");
+   	   		$(coordinates).css("border-radius", "50%");
+   			$(coordinates).addClass("bounce-top");
+   			}, 500)
+   			
    		 }
    		 
     </script>
@@ -67,7 +73,7 @@
 <body>
 <p>Selected seed is: ${gridSeed}</p>
 	<p>Clicked ID:</p>
-	<p class="clicked">kinda works</p>
+	<p class="clicked">Click on a sector.</p>
 	<div class="wrapper">
 	<div class="grid-container">
 	 <c:forEach var = "i" begin = "1" end = "${gridAxisy}">

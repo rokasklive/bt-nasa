@@ -7,25 +7,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "TBL_NOTES")
 public class Note {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "NOTE_ID")
 	private Long id;
-	
+
 	@Column(name = "NOTE_UFO")
-	private Ufo ufo;
-	
-	@Column(name = "NOTE_NOTE")
-	private String note;
-	
+	private Long ufoId;
+
+	@Column(name = "NOTE_ENTRY")
+	private String entry;
+
 	public Note(Ufo ufo, String note) {
-		this.ufo = ufo;
-		this.note = note;
+		this.ufoId = ufo.getId();
+		this.entry = note;
 	}
 
 	public Long getId() {
@@ -36,22 +35,24 @@ public class Note {
 		this.id = id;
 	}
 
-	public Ufo getUfo() {
-		return ufo;
-	}
-
-	public void setUfo(Ufo ufo) {
-		this.ufo = ufo;
-	}
-
-	public String getNote() {
-		return note;
+	public String getEntry() {
+		return entry;
 	}
 
 	public void setNote(String note) {
-		this.note = note;
+		this.entry = note;
 	}
-	
-	
+
+	public Long getUfoId() {
+		return ufoId;
+	}
+
+	public void setUfoId(Long ufoId) {
+		this.ufoId = ufoId;
+	}
+
+	public void setEntry(String entry) {
+		this.entry = entry;
+	}
 
 }

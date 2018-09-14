@@ -20,9 +20,13 @@ public class UfoDaoImpl implements UfoDao {
 	@Override
 	public boolean note(Ufo ufo, String note) {
 		
-		sessionFactory.getCurrentSession().save(new Note(ufo, note));
+		Long id = (Long) sessionFactory.getCurrentSession().save(new Note(ufo, note));
 		
-		return true;
+		if (id != null) {
+			return true;
+		}
+		
+		return false;
 	}
 
 }

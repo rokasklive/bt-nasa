@@ -55,9 +55,9 @@
 	<p class="clicked">Click on a sector.</p>
 	<div class="wrapper">
 		<div class="grid-container">
-			<c:forEach var="i" begin="1" end="${gridAxisy}">
+			<c:forEach var="i" begin="0" end="${gridAxisy - 1}">
 				<div class="rows">
-					<c:forEach var="j" begin="1" end="${gridAxisx}">
+					<c:forEach var="j" begin="0" end="${gridAxisx - 1}">
 						<div class="boxes" id="${j}_${i}" onclick="clicked(this, this.id)"></div>
 					</c:forEach>
 				</div>

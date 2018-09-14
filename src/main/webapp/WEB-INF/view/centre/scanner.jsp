@@ -18,12 +18,13 @@
 </style>
 <script type="text/javascript">
 	function clicked(divObj, clicked_id) {
-		divObj.style.background = "red";
 		$(".clicked").text(clicked_id);
-		
 		if($(divObj).hasClass("bounce-top")){
-		console.log("?????????");
+			console.log("Note darymas");
+			
 		}else{
+			divObj.style.background = "red";
+		
 			var req = "http://localhost:8080/nasa/findObj?coord=" + clicked_id;
 	
 			$.ajax({

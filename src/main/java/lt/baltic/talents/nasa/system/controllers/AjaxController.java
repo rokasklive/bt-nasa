@@ -20,11 +20,12 @@ public class AjaxController {
 	@Autowired
 	private UfoService ufoService;
 	
+	
+	
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
 	public String start(Model model,
 			@RequestParam(value = "coord", required = true) String request) {
-		
 		
 		System.out.println("ajax-"+request);
 		Grid grid = Grid.getGrid();

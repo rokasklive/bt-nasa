@@ -5,7 +5,7 @@
 
 <html>
 <head>
-<link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
+
 <link href="<c:url value="/resources/css/scanner.css" />"
 	rel="stylesheet">
 
@@ -14,62 +14,29 @@
 
 <title><spring:message code="message.title" /></title>
 <style>
-.wrapper {
-	text-align: center;
-}
 
-.grid-container {
-	margin: 0 auto;
-	padding: 0;
-	display: inline-block;
-}
-
-.rows {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: no-wrap;
-	padding: 0;
-	margin: 0;
-}
-
-.boxes {
-	width: 15px;
-	height: 15px;
-	border: 1px solid grey;
-	padding: 0;
-	margin: 0;
-}
-.dashboard-container{
-	display: inline-block;
-	width: 100vw;
-	height: 20vh;
-	margin: 0;
-	margin-top: 50px;
-}
-.dashboard{
-	display: inline-block;
-	width: 500px;
-	height: 100%;
-	background-color: grey;
-}
-}
 </style>
 <script type="text/javascript">
 	function clicked(divObj, clicked_id) {
 		divObj.style.background = "red";
 		$(".clicked").text(clicked_id);
-		var req = "http://localhost:8080/nasa/findObj?coord=" + clicked_id;
-
-		$.ajax({
-			type : "GET",
-			url : req,
-			dataType : "text",
-			success : function(data) {
-
-				console.log(data);
-				findObj(data);
-			}
-		});
+		
+		if($(divObj).hasClass("bounce-top")){
+		console.log("?????????");
+		}else{
+			var req = "http://localhost:8080/nasa/findObj?coord=" + clicked_id;
+	
+			$.ajax({
+				type : "GET",
+				url : req,
+				dataType : "text",
+				success : function(data) {
+	
+					console.log(data);
+					findObj(data);
+				}
+			});
+		}
 	}
 
 	function findObj(coordinates) {

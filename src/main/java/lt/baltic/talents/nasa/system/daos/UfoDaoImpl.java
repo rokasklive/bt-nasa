@@ -19,19 +19,10 @@ public class UfoDaoImpl implements UfoDao {
 
 	@Override
 	public boolean note(Ufo ufo, String note) {
-		TypedQuery<Note> query = sessionFactory.getCurrentSession()
-				.createQuery("from User where ufo = ?1 and note = ?2");
-
-		query.setParameter(1, ufo);
-		query.setParameter(2, note);
-
-		List<Note> notes = query.getResultList();
-
-		if (notes != null && notes.size() == 1) {
-			return true;
-		} else {
-			return false;
-		}
+		
+		sessionFactory.getCurrentSession().save(new Note(ufo, note));
+		
+		return true;
 	}
 
 }

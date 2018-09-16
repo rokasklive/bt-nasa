@@ -11,7 +11,8 @@
 
 <script src="<c:url value="/resources/js/jquery-3.3.1.js"/>"
 	type="text/javascript"></script>
-
+<script src="<c:url value="/resources/js/planetGen.js"/>"
+	type="text/javascript"></script>
 <title><spring:message code="message.title" /></title>
 <style>
 
@@ -21,10 +22,12 @@
 		$(".clicked").text(clicked_id);
 		if($(divObj).hasClass("bounce-top")){
 			console.log("Note darymas");
-			
+			nameGen(1);
 		}else{
 			divObj.style.background = "red";
-		
+		setTimeout(function(){
+			divObj.style.background = "none";
+		}, 1500)
 			var req = "http://localhost:8080/nasa/findObj?coord=" + clicked_id;
 	
 			$.ajax({
@@ -66,7 +69,7 @@
 		</div>
 	</div>
 	<div class="dashboard-container">
-		<div class="dashboard">
+		<div class="dashboard" id="placeholder">
 		</div>
 	</div>
 

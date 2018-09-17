@@ -19,14 +19,16 @@
 
 </style>
 <script type="text/javascript">
+
 	function clicked(divObj, clicked_id) {
 		$(".clicked").text(clicked_id);
 		if($(divObj).hasClass("bounce-top")){
 			console.log("Note darymas");
 			nameGen(1);
-			$("#uid").value(clicked_id);
+			$("#uid").val(clicked_id);
 		}else{
 			divObj.style.background = "red";
+			$('#' + clicked_id).addClass('puff-out-center');
 		setTimeout(function(){
 			divObj.style.background = "none";
 		}, 1500)
@@ -57,7 +59,7 @@
 </head>
 <body>
 	<p>Selected seed is: ${gridSeed}</p>
-	<p>Clicked ID:</p>
+	<p>Scanner coordinates:</p>
 	<p class="clicked">Click on a sector.</p>
 	<div class="wrapper">
 	<div class="scanner view">

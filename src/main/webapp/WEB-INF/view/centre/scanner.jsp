@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <html>
 <head>
@@ -23,6 +24,7 @@
 		if($(divObj).hasClass("bounce-top")){
 			console.log("Note darymas");
 			nameGen(1);
+			$("#uid").value(clicked_id);
 		}else{
 			divObj.style.background = "red";
 		setTimeout(function(){
@@ -71,14 +73,13 @@
 		</div>
 		<div class="dashboard-container">
 			<div class="info" id="placeholder"></div>
-			<form action="note" method="GET" id="note_form">
-				<textarea form="note_form" class="notes"></textarea>
-				<input type="submit" name="submit" value="submit">
-			</form>
+			<form:form action="note" modelAttribute="note" method="GET" id="note_form">
+				<textarea form="note_form" class="notes"></textarea>		
+				<input type="hidden" name="uid" id="uid"/>
+				<input type="submit" name="submit" value="submit"/>
+			</form:form>
 		
 		</div>
 	</div>
-	
-
 </body>
 </html>

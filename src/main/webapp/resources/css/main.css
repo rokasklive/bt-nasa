@@ -255,6 +255,14 @@ main {
 	        animation: puff-out-center 1s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
 }
 
+.submit_notes{
+
+	width: 100%;
+	height: 15px;
+	background-color: blue;
+	
+}
+	
 
 @-webkit-keyframes puff-out-center {
   0% {

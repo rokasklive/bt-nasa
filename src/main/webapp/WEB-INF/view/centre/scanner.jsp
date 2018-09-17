@@ -47,6 +47,21 @@
 		}
 	}
 
+	function sendNote(){
+		var text = $('.notes').val();
+		var coord = $("#uid").val();
+		$.ajax({
+			type : "POST",
+			url : "http://localhost:8080/nasa/note",
+			data: { text: JSON.stringify(text), coord: JSON.stringify(coord) },
+			success : function(data) {
+				
+				console.log("yay");
+				
+			}
+		});
+	}
+	
 	function findObj(coordinates) {
 		setTimeout(function() {
 			$(coordinates).css("background-color", "green");
@@ -75,12 +90,12 @@
 		</div>
 		<div class="dashboard-container">
 			<div class="info" id="placeholder"></div>
-			<form:form action="note" modelAttribute="note" method="GET" id="note_form">
-				<textarea form="note_form" class="notes"></textarea>		
+			<form:form action="#" method="POST" id="note_form" name="note_form">
+				<textarea class="notes" name="notes" form="note_form" id="notes"></textarea>		
 				<input type="hidden" name="uid" id="uid"/>
-				<input type="submit" class="submit_btn" name="Submit" value="Submit">
+				
 			</form:form>
-		
+			<div onclick="sendNote()" class="submit_note">Submit</div>
 		</div>
 	</div>
 </body>

@@ -6,7 +6,7 @@
 <html>
 <head>
 
-<link href="<c:url value="/resources/css/scanner.css" />"
+<link href="<c:url value="/resources/css/main.css" />"
 	rel="stylesheet">
 
 <script src="<c:url value="/resources/js/jquery-3.3.1.js"/>"
@@ -58,6 +58,7 @@
 	<p>Clicked ID:</p>
 	<p class="clicked">Click on a sector.</p>
 	<div class="wrapper">
+	<div class="scanner view">
 		<div class="grid-container">
 			<c:forEach var="i" begin="0" end="${gridAxisy - 1}">
 				<div class="rows">
@@ -67,11 +68,17 @@
 				</div>
 			</c:forEach>
 		</div>
-	</div>
-	<div class="dashboard-container">
-		<div class="dashboard" id="placeholder">
+		</div>
+		<div class="dashboard-container">
+			<div class="info" id="placeholder"></div>
+			<form action="note" method="GET" id="note_form">
+				<textarea form="note_form" class="notes"></textarea>
+				<input type="submit" name="submit" value="submit">
+			</form>
+		
 		</div>
 	</div>
+	
 
 </body>
 </html>

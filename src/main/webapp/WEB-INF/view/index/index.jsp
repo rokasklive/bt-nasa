@@ -40,13 +40,13 @@
 
 			<input type="text" name="seed" id="seed" placeholder="Seed">
 
-			<input type="number" name="objs" id="objs" placeholder="Object amount">
+			<input type="number" name="objs" id="objs" placeholder="Object amount" min="1" max="10">
 
-			<input type="number" name="axisx" id="axisx" placeholder="Scanner width">
+			<input type="number" name="axisx" id="axisx" placeholder="Scanner width" min="15" max="35">
 	
-			<input type="number" name="axisy" id="axisy" placeholder="Scanner height">
+			<input type="number" name="axisy" id="axisy" placeholder="Scanner height" min="15" max="35">
 
-			<input type="submit" name="submit" value="Submit">
+			<input type="submit" name="submit" value="submit">
 
 	</form>
 </body>

@@ -34,7 +34,7 @@
 			success : function(data) {
 				
 				console.log("yay");
-				
+				$(".notes").val("");
 			}
 		});
 	}

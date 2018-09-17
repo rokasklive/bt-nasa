@@ -55,4 +55,9 @@ public class Note {
 		this.entry = entry;
 	}
 
+	@Override
+	public String toString() {
+		return "Note [id=" + id + ", ufoId=" + ufoId + ", entry=" + entry + "]";
+	}
+
 }

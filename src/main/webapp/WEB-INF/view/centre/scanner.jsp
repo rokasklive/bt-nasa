@@ -73,7 +73,7 @@
 			<div class="info" id="placeholder"></div>
 			<form action="note" method="GET" id="note_form">
 				<textarea form="note_form" class="notes"></textarea>
-				<input type="submit" name="submit" value="submit">
+				<input type="submit" class="submit_btn" name="Submit" value="Submit">
 			</form>
 		
 		</div>
